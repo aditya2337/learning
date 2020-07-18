@@ -1,0 +1,69 @@
+body {
+    background: black;
+}
+
+* {
+    color: white;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.blue {
+    background: blue;
+}
+
+.red {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.eyes-container {
+    height: 90vh;
+    margin: 0 10%;
+}
+
+.nothing {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    float: right;
+}
+
+.eye {
+    height: 100px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    position: relative;
+    z-index: 1;
+}
+
+
+.eye::after {
+    content: " ";
+    background-color: black;
+    position: absolute;
+    height: 30px;
+    width: 20px;
+    border-radius: 50%;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
