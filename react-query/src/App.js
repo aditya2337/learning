@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query'
-import axios from 'axios'
+import axios, { CancelToken } from 'axios'
 import { ReactQueryDevtools } from 'react-query-devtools'
 import './App.css';
 
@@ -21,10 +21,25 @@ function useApi(api) {
 function usePokemonSeach(pokemon) {
   return useQuery(
     pokemon,
-    async () => axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-    .then(res => res.data),
+    () => {
+      const source = CancelToken.source()
+      console.log(source)
+      const promise = new Promise(resolve => setTimeout(resolve, 1000))
+        .then(() => {
+          return axios
+            .get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`, {
+              cancelToken: source.token
+            })
+        })
+        .then(res => res.data)
+      promise.cancel = () => {
+        source.cancel('Query was cancelled')
+      }
+      return promise
+    },
     {
-      enabled: pokemon
+      enabled: pokemon,
+      retry: 0
     }
   )
 }
