@@ -1,0 +1,35 @@
+version: 2
+updates:
+  # Configuration for npm
+  - package-ecosystem: "npm"
+    directory: "/computerScience"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/firstReactNative"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/firstReactNativeExpo"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/GSAP
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/optimisation
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/PWA-stuff
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/react-query
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/webgl
+    schedule:
+      interval: "daily"
