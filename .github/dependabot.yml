@@ -14,22 +14,22 @@ updates:
     schedule:
       interval: "daily"
   - package-ecosystem: "npm"
-    directory: "/GSAP
+    directory: "/GSAP"
     schedule:
       interval: "daily"
   - package-ecosystem: "npm"
-    directory: "/optimisation
+    directory: "/optimisation"
     schedule:
       interval: "daily"
   - package-ecosystem: "npm"
-    directory: "/PWA-stuff
+    directory: "/PWA-stuff"
     schedule:
       interval: "daily"
   - package-ecosystem: "npm"
-    directory: "/react-query
+    directory: "/react-query"
     schedule:
       interval: "daily"
   - package-ecosystem: "npm"
-    directory: "/webgl
+    directory: "/webgl"
     schedule:
       interval: "daily"
