@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "gsap": "^3.6.0"
+    "gsap": "^3.11.4"
   },
   "scripts": {
     "start": "parcel index.html",
